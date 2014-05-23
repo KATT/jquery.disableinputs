@@ -1,0 +1,20 @@
+{
+  "name": "jquery.disableinputs",
+  "main": "jquery.disableinputs.js",
+  "version": "0.2.0",
+  "homepage": "https://github.com/KATT/jquery.disableinputs",
+  "authors": [
+    "Alexander Johansson <alexander@n1s.se>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "*"
+  }
+}

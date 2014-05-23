@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jquery.disableInputs</title>
+</head>
+<body>
+  <form action="" method="POST">
+    <p>
+      <label for="text">An input:</label><br>
+      <input type="text" id="text">
+    </p>
+    <p>
+      <select name="disabled-select" disabled="disabled">
+        <option value="">I'm already disabled (&amp; my state will be preserved)</option>
+      </select>
+    </p>
+    <input type="submit">
+  </form>
+
+  <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+  <script src="../jquery.disableinputs.js"></script>
+  <script>
+    $(function() {
+      $('form').on('submit', function(e) {
+          e.preventDefault();
+          var $this = $(this);
+
+          // disable form's inputs
+          $this.disableInputs(true);
+
+          console.log('disabling form input for 1 second..');
+
+          setTimeout(function() {
+            $this.disableInputs(false);
+          }, 1000);
+        });
+    });
+  </script>
+</body>
+</html>
