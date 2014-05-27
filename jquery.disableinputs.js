@@ -1,10 +1,13 @@
 ;(function($) {
-  $.fn.disableInputs = function(disable) {
+  var pluginName = 'disableInputs';
+  var beforeStateKey = pluginName + '-before';
+
+  $.fn[pluginName] = function(disable) {
     this.each(function() {
       var $form = $(this);
       var $inputs = $form.find('textarea,input,select,button');
 
-      if ($form.data('disableInputs') === disable) {
+      if ($form.data(pluginName) === disable) {
         // console.log('no change on disableInputs');
         return;
       }
@@ -14,16 +17,16 @@
         if (disable) {
           // save state
           beforeState = $input.prop('disabled');
-          $input.data('disableInputsBefore', beforeState);
+          $input.data(beforeStateKey, beforeState);
           $input.prop('disabled', 'disabled');
         } else {
           // retrieve state
-          beforeState = $input.data('disableInputsBefore');
+          beforeState = $input.data(beforeStateKey);
           $input.prop('disabled', beforeState);
         }
       });
 
-      $form.data('disableInputs', disable);
+      $form.data(pluginName, disable);
     });
   };
 })(jQuery);
