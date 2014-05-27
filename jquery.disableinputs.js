@@ -3,6 +3,8 @@
   var beforeStateKey = pluginName + '-before';
 
   $.fn[pluginName] = function(disable) {
+    disable = (typeof disable == 'undefined' ? true : disable);
+
     this.each(function() {
       var $form = $(this);
       var $inputs = $form.find('textarea,input,select,button');
