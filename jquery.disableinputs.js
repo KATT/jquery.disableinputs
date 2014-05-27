@@ -11,7 +11,7 @@
         // console.log('no change on disableInputs');
         return;
       }
-      $inputs.each(function(e, input) {
+      $inputs.each(function(index, input) {
         var $input = $(input);
         var beforeState;
         if (disable) {
