@@ -1,7 +1,7 @@
 # jquery.disableInputs
 
 
-Small jQuery plugin to toggle `disabled` on all of a element's controls (`input`/`textarea`/`select`/`button`). 
+Small jQuery plugin to toggle `disabled` on all of a element's controls (`input`/`textarea`/`select`/`button`).
 
 Useful when processing an AJAX submission on a form.
 
