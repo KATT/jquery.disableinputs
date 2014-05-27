@@ -22,14 +22,14 @@
   <script src="../jquery.disableinputs.js"></script>
   <script>
     $(function() {
-      $('form').on('submit', function(e) {
+      $("form").on("submit", function(e) {
           e.preventDefault();
           var $this = $(this);
 
-          // disable form's inputs
+          // disable form"s inputs
           $this.disableInputs(true);
 
-          console.log('disabling form input for 1 second..');
+          console.log("disabling form input for 1 second..");
 
           setTimeout(function() {
             $this.disableInputs(false);
