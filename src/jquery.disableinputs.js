@@ -24,7 +24,9 @@
         } else {
           // retrieve state
           beforeState = $input.data(beforeStateKey);
-          $input.prop("disabled", beforeState);
+          if (typeof beforeState != 'undefined') {
+            $input.prop("disabled", beforeState);
+          }
         }
       });
 
