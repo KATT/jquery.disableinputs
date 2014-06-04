@@ -1,7 +1,7 @@
 {
   "name": "jquery.disableinputs",
   "main": "src/jquery.disableinputs.js",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "homepage": "https://github.com/KATT/jquery.disableinputs",
   "authors": [
     "Alexander Johansson <alexander@n1s.se>"
